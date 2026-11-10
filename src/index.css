@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-maroon: #5A1727;
+    --color-burgundy: #310B18;
+    --color-gold-antique: #C6A15B;
+    --color-gold-champagne: #F0D58E;
+    --color-ivory: #FFFAF4;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-cinzel-decorative {
+  font-family: 'Cinzel Decorative', serif;
+}
+
+.font-cormorant {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-script {
+  font-family: 'Great Vibes', cursive;
+}
+
+.font-arabic {
+  font-family: 'Amiri', serif;
+}
+
+/* Gold foil text shimmer */
+.gold-text-shimmer {
+  background: linear-gradient(
+    135deg,
+    #F0D58E 0%,
+    #C6A15B 25%,
+    #FFF4D2 50%,
+    #C6A15B 75%,
+    #E8C477 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: goldShimmer 6s linear infinite;
+  display: inline-block;
+  padding-top: 0.15em;
+  padding-bottom: 0.22em;
+  padding-left: 0.15em;
+  padding-right: 0.15em;
+  line-height: 1.35;
+  overflow: visible;
+}
+
+@keyframes goldShimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Gold border gradient */
+.gold-border {
+  border-image: linear-gradient(135deg, #F0D58E, #C6A15B, #8F6B28, #F0D58E) 1;
+}
+
+/* 3D Envelope perspective */
+.perspective-1000 {
+  perspective: 1200px;
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Floating particles */
+@keyframes floatParticle {
+  0% {
+    transform: translateY(0px) rotate(0deg) scale(0.8);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translateY(-25px) rotate(180deg) scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-50px) rotate(360deg) scale(0.8);
+    opacity: 0.2;
+  }
+}
+
+.animate-float-particle {
+  animation: floatParticle 6s ease-in-out infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #310B18;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C6A15B;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #F0D58E;
+}
